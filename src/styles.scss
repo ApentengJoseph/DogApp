@@ -1,22 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 
-  &__content{
+  &__content {
     display: flex;
     flex-direction: column;
     margin: 0.5rem;
   }
-  &__random-img{
+  &__random-img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,38 +25,37 @@
     cursor: pointer;
   }
 }
-.breed-section{
-    display: flex;
-    justify-content: space-around;
-    text-transform: uppercase;
+
+.breed-section {
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
 }
 
-.content{
+.content {
   display: flex;
   flex-direction: column;
 }
 
-ul{
-  list-style-type:circle;
+ul {
+  list-style-type: circle;
   cursor: pointer;
   text-decoration: none;
 }
 
-
-img{
+img {
   margin: 1rem;
   width: 12.5rem;
   height: 12.5rem;
   object-fit: cover;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
-
 }
 
-button{
+button {
   width: 10rem;
   height: 2rem;
   background: green;
@@ -65,14 +64,18 @@ button{
   margin: 1rem;
   cursor: pointer;
   border: none;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
 }
 
-
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
