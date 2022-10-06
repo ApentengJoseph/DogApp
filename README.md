@@ -1,27 +1,21 @@
-# DogApiTask
+## Dog Photo Gallery App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+This project main objetive is for displaying of Dog Images and their specific breed.
 
-## Development server
+## Project Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This application displays random dog images and also provide a category where users can click to view specific breeds based on their selection.
 
-## Code scaffolding
+This application was build with Angular version 14 and also Angular Material.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project made full utilized the dog.ceo api (https://dog.ceo/dog-api/documentation/).
 
-## Build
+The application home-page provides a random dog photo gallery and a button for the user to select specific categories to view images related to the selection on a new page. The user can click on any image on the home-page to view that particular image.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+On navavigation to any breed/sub-breed category will display the name of that particular breed/sub-breed and related images. It also has a back button to route the user back to the home-page component.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## How to Install amd Run the Project
 
-## Running end-to-end tests
+To get the project running on your local machine you will have to first clone the repo and run npm install to get the required dependencies, then you run npm start to view the application on your browser.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
