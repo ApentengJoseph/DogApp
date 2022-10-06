@@ -14,7 +14,7 @@ The application home-page provides a random dog photo gallery and a button for t
 
 On navavigation to any breed/sub-breed category will display the name of that particular breed/sub-breed and related images. It also has a back button to route the user back to the home-page component.
 
-
+Implementing automated test is one of the things I'll love to add the app subsequently.
 ## How to Install amd Run the Project
 
 To get the project running on your local machine you will have to first clone the repo and run npm install to get the required dependencies, then you run npm start to view the application on your browser.
