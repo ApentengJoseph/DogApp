@@ -1,8 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { DogapiService } from '../dogapi.service';
-import { ImagedialogComponent } from '../imagedialog/imagedialog.component';
 
 @Component({
   selector: 'app-home-page',

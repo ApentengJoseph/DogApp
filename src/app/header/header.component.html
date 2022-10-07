@@ -1,5 +1,6 @@
 <h1>DOG PHOTO GALLERY</h1>
 <div class="top-content">
+  <!--This menu button is for viewing the list of categories-->
   <button *ngIf="randomImagesData" mat-stroked-button [matMenuTriggerFor]="animals">
     View Categories
   </button>
@@ -29,5 +30,7 @@
       {{ data.value }}
     </button>
   </mat-menu>
-  <h3 *ngIf="!randomImagesData"><strong>{{ name | uppercase}}</strong></h3>
+
+  <!--For displaying breeds/subbreed names-->
+  <h3 class="breeds-name" *ngIf="!randomImagesData"><strong>{{ name | uppercase}}</strong></h3>
 </div>

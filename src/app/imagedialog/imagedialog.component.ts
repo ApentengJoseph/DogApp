@@ -7,7 +7,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./imagedialog.component.scss'],
 })
 export class ImagedialogComponent implements OnInit {
-  dogImage = 'any';
+  dogImage!: any;
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
 
   ngOnInit(): void {
