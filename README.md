@@ -10,9 +10,11 @@ This application was build with Angular version 14 and also Angular Material.
 
 This project made full utilized the dog.ceo api (https://dog.ceo/dog-api/documentation/).
 
-The application home-page provides a random dog photo gallery and a button for the user to select specific categories to view images related to the selection on a new page. The user can click on any image on the home-page to view that particular image.
+The application home-page provides a random dog photo gallery and a button for the user to select specific categories to view images related to the selection on a new page. The user can click on any image to view that particular image.
 
 On navavigation to any breed/sub-breed category will display the name of that particular breed/sub-breed and related images. It also has a back button to route the user back to the home-page component.
+
+This app levarages components reusability and modularity.
 
 Implementing automated test is one of the things I'll love to add the app subsequently.
 ## How to Install amd Run the Project
