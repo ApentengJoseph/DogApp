@@ -1,31 +1,5 @@
 <div class="container">
-  <div class="container__content">
-    <h1>Random Dog Images</h1>
-    <div class="breed-section">
-      <div class="content">
-        <h2>Breeds</h2>
-        <div *ngFor="let data of breeds | keyvalue">
-          <ul>
-            <li routerLink="/breed/{{ data.value }}">{{ data.value}}</li>
-          </ul>
-
-        </div>
-      </div>
-      <div>
-        <h2>Sub-breeds</h2>
-        <div *ngFor="let data of subBreed">
-          <ul>
-            <li routerLink="/breed/{{ data }}">{{ data}}</li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-    <div *ngIf="!randomDogImg"><mat-spinner></mat-spinner></div>
-    <div *ngIf="randomDogImg" class="container__random-img">
-      <div *ngFor="let data of randomDogImg">
-        <img src="{{ data }}" (click)="openDialog(data)" />
-      </div>
-    </div>
-  </div>
+  <app-header [randomImagesData]="randomDogImg"></app-header>
+  <!--Div responsible for displaying the image gallery-->
+  <app-photogallery [imageData]="randomDogImg"></app-photogallery>
 </div>

@@ -1,0 +1,33 @@
+<h1>DOG PHOTO GALLERY</h1>
+<div class="top-content">
+  <button *ngIf="randomImagesData" mat-stroked-button [matMenuTriggerFor]="animals">
+    View Categories
+  </button>
+  <mat-menu #animals="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="vertebrates">
+      Sub-breeds
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="invertebrates">breeds</button>
+  </mat-menu>
+
+  <mat-menu #vertebrates="matMenu">
+    <button
+      routerLink="/sub-breed/{{ data }}"
+      mat-menu-item
+      *ngFor="let data of subBreed"
+    >
+      {{ data }}
+    </button>
+  </mat-menu>
+
+  <mat-menu #invertebrates="matMenu">
+    <button
+      routerLink="/breed/{{ data.value }}"
+      mat-menu-item
+      *ngFor="let data of breeds | keyvalue"
+    >
+      {{ data.value }}
+    </button>
+  </mat-menu>
+  <h3 *ngIf="!randomImagesData"><strong>{{ name | uppercase}}</strong> BREED</h3>
+</div>

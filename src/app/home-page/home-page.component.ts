@@ -11,47 +11,21 @@ import { ImagedialogComponent } from '../imagedialog/imagedialog.component';
 })
 export class HomePageComponent implements OnInit, OnDestroy {
   randomDogImg!: [] | any;
-  subBreed = [];
-  dogImg!: string;
   sub!: Subscription;
-  breeds!: any;
-  constructor(private dogApiService: DogapiService, public dialog: MatDialog) {}
+  constructor(private dogApiService: DogapiService) {}
 
   ngOnInit(): void {
+    //This code gets the random dog images so it can be displayed.
     this.sub = this.dogApiService.getRandomDogsImage().subscribe(
       (data: [] | any) => {
         return (this.randomDogImg = data.message);
       },
       (err) => console.log(err)
     );
-
-    this.sub = this.dogApiService.getBreeds().subscribe(
-      (data = []) => {
-        this.breeds = Object.keys(data.message);
-      },
-      (err) => console.log(err)
-    );
-
-    this.sub = this.dogApiService.getsubBreed().subscribe(
-      (data = []) => {
-        return (this.subBreed = data.message);
-      },
-      (err) => console.log(err)
-    );
   }
 
-
+  //This lifecycle hook was used for the purpose of unsubscribing from every observable after the component is destroyed.
   ngOnDestroy(): void {
     this.sub.unsubscribe();
-  }
-
-  openDialog(data: string): void {
-    this.dialog.open(ImagedialogComponent, {
-      width: '350px',
-      height: '280px',
-      data: {
-        image: data,
-      },
-    });
   }
 }

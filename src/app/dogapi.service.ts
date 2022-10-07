@@ -16,7 +16,7 @@ export class DogapiService {
   breedsApi = 'https://dog.ceo/api/breeds/list/all';
 
   //URL for getting sub-breed specified
-  specificSubBreed = `https://dog.ceo/api/breed/terrier`;
+  specificSubBreed = `https://dog.ceo/api/breed/terrier/`;
 
   //URL for getting breed specified
   specificBreed = `https://dog.ceo/api/breed/`;
@@ -28,7 +28,7 @@ export class DogapiService {
     return this.http.get(this.apiUrl);
   }
 
-  // //This method returns list of sub-Breed
+  //This method returns list of sub-Breed
   getsubBreed(): Observable<any> {
     return this.http.get(this.subBreedApi);
   }
@@ -41,7 +41,7 @@ export class DogapiService {
   //This method gets the subbreed specified
   getSpecifiedSubBreed(subBreedName: string): Observable<any> {
     return this.http.get(
-      `${this.specificSubBreed}/${subBreedName}/images/random/50`
+      `${this.specificSubBreed}${subBreedName}/images/random/50`
     );
   }
 
@@ -49,4 +49,7 @@ export class DogapiService {
   getSpecifiedBreed(breedName: string): Observable<any> {
     return this.http.get(`${this.specificBreed}${breedName}/images/random/50`);
   }
+
+
+  //This methods can be modified to handle errors while trying to retrieve data from the API.
 }
