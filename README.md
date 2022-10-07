@@ -8,7 +8,7 @@ This application displays random dog images and also provide a category where us
 
 This application was build with Angular version 14 and also Angular Material.
 
-This project made full utilized the dog.ceo api (https://dog.ceo/dog-api/documentation/).
+This project made full utilization of the dog.ceo API (https://dog.ceo/dog-api/documentation/).
 
 The application home-page provides a random dog photo gallery and a button for the user to select specific categories to view images related to the selection on a new page. The user can click on any image to view that particular image.
 
