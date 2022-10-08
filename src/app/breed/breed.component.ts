@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
 import { Subscription } from 'rxjs';
 import { DogapiService } from '../dogapi.service';
 
@@ -8,7 +8,7 @@ import { DogapiService } from '../dogapi.service';
   templateUrl: './breed.component.html',
   styleUrls: ['./breed.component.scss'],
 })
-export class BreedComponent implements OnInit {
+export class BreedComponent implements OnInit, OnDestroy {
   breed!: [] | any;
   private sub!: Subscription;
   name!: any;
