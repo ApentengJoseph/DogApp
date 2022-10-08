@@ -1,6 +1,6 @@
 ## Dog Photo Gallery App
 
-This project main objetive is for displaying of Dog Images and their specific breed.
+This project main objective is for displaying of Dog Images and their specific breed.
 
 ## Project Description
 
@@ -12,7 +12,7 @@ This project made full utilization of the dog.ceo API (https://dog.ceo/dog-api/d
 
 The application home-page provides a random dog photo gallery and a button for the user to select specific categories to view images related to the selection on a new page. The user can click on any image to view that particular image.
 
-On navavigation to any breed/sub-breed category will display the name of that particular breed/sub-breed and related images. It also has a back button to route the user back to the home-page component.
+On navigation to any breed/sub-breed category will display the name of that particular breed/sub-breed and related images. It also has a back button to route the user back to the home-page component.
 
 This app levarages components reusability and modularity.
 
