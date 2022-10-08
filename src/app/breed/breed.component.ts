@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { DogapiService } from '../dogapi.service';
 
@@ -18,6 +18,10 @@ export class BreedComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    this.getSpecifiedBreed();
+  }
+
+  getSpecifiedBreed() {
     //Getting a snapshot of the route params(which is the name of the specified breed) so it can be passed to the getSpecifiedBreed() method  assign the data to the breed property on the component for binding on the template
     this.name = this.route.snapshot.paramMap.get('name');
     this.sub = this.dogApiService.getSpecifiedBreed(this.name).subscribe(

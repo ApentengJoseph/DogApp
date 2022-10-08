@@ -19,6 +19,10 @@ export class SubBreedComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    this.getSpecifiedSubBreed();
+  }
+
+  getSpecifiedSubBreed() {
     //Getting a snapshot of the route params(which is the name of the specified su-breed) so it can be passed to the getSpecifiedSubBreed() method and assign the data to the suBreed property on the component for binding on the template
     this.name = this.route.snapshot.paramMap.get('name');
     this.sub = this.dogApiService.getSpecifiedSubBreed(this.name).subscribe(

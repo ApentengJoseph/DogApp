@@ -13,6 +13,10 @@ export class HomePageComponent implements OnInit, OnDestroy {
   constructor(private dogApiService: DogapiService) {}
 
   ngOnInit(): void {
+    this.getRandomDogImages();
+  }
+
+  getRandomDogImages() {
     //This code gets the random dog images so it can be displayed.
     // It binds the retrieved data to this.randomDogImage so it can be used in the template.
     this.sub = this.dogApiService.getRandomDogsImage().subscribe(
