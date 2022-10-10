@@ -33,19 +33,19 @@ export class DogapiService {
     return this.http.get(this.subBreedApi);
   }
 
-  //This method will get all the breed list
+  //This method will get all the breed list from the API
   getBreeds(): Observable<any> {
     return this.http.get(this.breedsApi);
   }
 
-  //This method gets the subbreed specified
+  //This method gets the subbreed specified using the passed in subbreed name
   getSpecifiedSubBreed(subBreedName: string): Observable<any> {
     return this.http.get(
       `${this.specificSubBreed}${subBreedName}/images/random/50`
     );
   }
 
-  //This method will get the specified breed
+  //This method will get the specified breed using the passed in breed name
   getSpecifiedBreed(breedName: string): Observable<any> {
     return this.http.get(`${this.specificBreed}${breedName}/images/random/50`);
   }
